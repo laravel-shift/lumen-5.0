@@ -1,8 +1,11 @@
 <?php namespace App\Http\Controllers;
 
-use Laravel\Lumen\Routing\Controller as BaseController;
+use Illuminate\Foundation\Bus\DispatchesCommands;
+use Illuminate\Routing\Controller as BaseController;
+use Illuminate\Foundation\Validation\ValidatesRequests;
 
-class Controller extends BaseController
+abstract class Controller extends BaseController
 {
-    //
+
+    use DispatchesCommands, ValidatesRequests;
 }
